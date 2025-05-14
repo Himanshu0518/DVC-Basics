@@ -21,6 +21,9 @@ df1 = pd.DataFrame([{
 # Concatenate new row to the original DataFrame
 df = pd.concat([df, df1], axis=0, ignore_index=True)
 
+new_row = {'Name':'GF','Age':20,'Score':78}
+
+df.loc[len(df.index)] = new_row 
 # Create data directory if it doesn't exist
 os.makedirs('data', exist_ok=True)
 
